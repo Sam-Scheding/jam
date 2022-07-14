@@ -1,0 +1,47 @@
+$padding: (
+  0: 0px,
+  100: 2px,
+  200: 4px,
+  300: 6px,
+  400: 8px,
+  500: 16px,
+  600: 32px,
+  700: 64px,
+  800: 128px,
+  900: 256px,
+  1000: 512px,
+  auto: auto,
+);
+
+
+@each $key, $value in $padding {
+  .padding\:#{$key} {
+    padding: #{$value};
+  }
+
+  .padding-top\:#{$key} {
+    padding-top: #{$value};
+  }
+
+  .padding-right\:#{$key} {
+    padding-right: #{$value};
+  }
+
+  .padding-bottom\:#{$key} {
+    padding-bottom: #{$value};
+  }
+
+  .padding-left\:#{$key} {
+    padding-left: #{$value};
+  }
+
+  .padding-horizontal\:#{$key} {
+    padding-left: #{$value};
+    padding-right: #{$value};
+  }
+  
+  .padding-vertical\:#{$key} {
+    padding-top: #{$value};
+    padding-bottom: #{$value};
+  }
+}

@@ -1,0 +1,21 @@
+$height: (
+  0: 0px,
+  100:2px,
+  200:4px,
+  300:8px,
+  400:16px,
+  500:24px,
+  600:64px,
+  700:128px,
+  800:256px,
+  900:512px,
+  100\%: 100%,
+  100vh: 100vh,
+  auto: auto,
+);
+
+@each $key, $value in $height {
+  .height\:#{$key} {
+    height: $value;
+  }
+}

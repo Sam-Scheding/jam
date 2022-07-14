@@ -1,0 +1,39 @@
+// Primary
+$primary: (
+  50:  hsl(219, 94%, 94%),
+  100: hsl(220, 90%, 85%),
+  200: hsl(220, 88%, 75%),
+  300: hsl(220, 85%, 64%),
+  400: hsl(220, 83%, 55%),
+  500: hsl(220, 80%, 50%),
+  600: hsl(220, 82%, 43%),
+  700: hsl(220, 85%, 34%),
+  800: hsl(220, 88%, 25%),
+  900: hsl(220, 89%, 18%),
+);
+
+@each $key, $value in $primary {
+  .color\:primary-#{$key} {
+    color: $value;
+  }
+
+  .background-color\:primary-#{$key} {
+    background-color: $value;
+  }
+
+  .border-color\:primary-#{$key} {
+    border-color: $value;
+  }    
+}
+
+.color\:primary {
+  color: map-get($map: $primary, $key: 500);
+}
+
+.background-color\:primary {
+  background-color: map-get($map: $primary, $key: 500);
+}
+
+.border-color\:primary {
+  border-color: map-get($map: $primary, $key: 500);
+}

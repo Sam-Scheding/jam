@@ -1,0 +1,46 @@
+$margin: (
+  0: 0px,
+  100: 16px,
+  200: 24px,
+  300: 32px,
+  400: 48px,
+  500: 64px,
+  600: 96px,
+  700: 128px,
+  800: 192px,
+  900: 256px,
+  1000: 512px,
+  auto: auto,
+);
+
+@each $key, $value in $margin {
+  .margin\:#{$key} {
+    margin: #{$value};
+  }
+
+  .margin-top\:#{$key} {
+    margin-top: #{$value};
+  }
+
+  .margin-right\:#{$key} {
+    margin-right: #{$value};
+  }
+
+  .margin-bottom\:#{$key} {
+    margin-bottom: #{$value};
+  }
+
+  .margin-left\:#{$key} {
+    margin-left: #{$value};
+  }
+
+  .margin-horizontal\:#{$key} {
+    margin-left: #{$value};
+    margin-right: #{$value};
+  }
+  
+  .margin-vertical\:#{$key} {
+    margin-top: #{$value};
+    margin-bottom: #{$value};
+  }
+}

@@ -1,0 +1,39 @@
+// Primary
+$success: (
+  0:   hsl(120, 65%, 93%),
+  100: hsl(120, 64%, 84%),
+  200: hsl(120, 60%, 67%),
+  300: hsl(120, 58%, 53%),
+  400: hsl(120, 78%, 42%),
+  500: hsl(120, 100%, 35%),
+  600: hsl(120, 100%, 30%),
+  700: hsl(120, 100%, 24%),
+  800: hsl(120, 100%, 18%),
+  900: hsl(120, 100%, 13%),
+);
+
+@each $key, $value in $success {
+  .color\:success-#{$key} {
+    color: $value;
+  }
+
+  .background-color\:success-#{$key} {
+    background-color: $value;
+  }
+
+  .border-color\:success-#{$key} {
+    border-color: $value;
+  }    
+}
+
+.color\:success {
+  color: map-get($map: $success, $key: 500);
+}
+
+.background-color\:success {
+  background-color: map-get($map: $success, $key: 500);
+}
+
+.border-color\:success {
+  border-color: map-get($map: $success, $key: 500);
+}

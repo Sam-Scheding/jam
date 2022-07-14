@@ -1,0 +1,38 @@
+$error: (
+  0:   hsl(0, 81%, 94%),
+  100: hsl(0, 77%, 85%),
+  200: hsl(0, 74%, 70%),
+  300: hsl(0, 71%, 57%),
+  400: hsl(0, 80%, 46%),
+  500: hsl(0, 100%, 40%),
+  600: hsl(0, 100%, 34%),
+  700: hsl(0, 100%, 28%),
+  800: hsl(0, 100%, 22%),
+  900: hsl(0, 100%, 16%),
+);
+
+@each $key, $value in $error {
+  .color\:error-#{$key} {
+    color: $value;
+  }
+
+  .background-color\:error-#{$key} {
+    background-color: $value;
+  }
+
+  .border-color\:error-#{$key} {
+    border-color: $value;
+  }
+}
+
+.color\:error {
+  color: map-get($map: $error, $key: 500);
+}
+
+.background-color\:error {
+  background-color: map-get($map: $error, $key: 500);
+}
+
+.border-color\:error {
+  border-color: map-get($map: $error, $key: 500);
+}
